@@ -1,0 +1,2 @@
+# WPSL
+WPSL license
