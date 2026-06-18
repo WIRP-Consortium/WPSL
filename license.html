@@ -47,6 +47,19 @@
         margin-bottom: 25px;
     }
 
+    .license-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .notice {
+        background: #eef6ff;
+        border-left: 4px solid #1565c0;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+
     ul {
         padding-left: 25px;
     }
@@ -62,16 +75,26 @@
         color: #555;
     }
 
-    .license-name {
-        font-size: 1.2rem;
-        font-weight: bold;
+    .copy-btn {
+        background: #1565c0;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 15px;
+        margin-bottom: 20px;
+        transition: 0.3s;
     }
 
-    .notice {
-        background: #eef6ff;
-        border-left: 4px solid #1565c0;
-        padding: 15px;
-        border-radius: 5px;
+    .copy-btn:hover {
+        background: #0d47a1;
+    }
+
+    .copy-status {
+        margin-left: 10px;
+        color: green;
+        font-weight: bold;
     }
 
     @media (max-width: 768px) {
@@ -92,93 +115,122 @@
 <div class="container">
 
 ```
-<h1>WIRP Permissive Software License (WPSL-OS)</h1>
+<button class="copy-btn" onclick="copyLicense()">
+    📋 Copy License
+</button>
 
-<div class="meta">
-    <div class="license-name">Version 1.0 — 18 June 2026</div>
-    <div>Copyright © 2026 World Internet Rules & Protocol</div>
-</div>
+<span id="copyStatus" class="copy-status"></span>
 
-<h2>1. Preamble</h2>
+<div id="license-content">
 
-<p>
-    This license is a permissive free software license that allows users
-    to freely use, modify, and distribute software while preserving
-    copyright notice and disclaimer requirements.
-</p>
+    <h1>WIRP Permissive Software License (WPSL-OS)</h1>
 
-<div class="notice">
-    The purpose of this license is to encourage open software development
-    while maintaining legal clarity and attribution.
-</div>
+    <div class="meta">
+        <div class="license-name">Version 1.0 — 18 June 2026</div>
+        <div>Copyright © 2026 World Internet Rules & Protocol</div>
+    </div>
 
-<h2>2. Permission Grant</h2>
+    <h2>1. Preamble</h2>
 
-<p>
-    Permission is hereby granted, free of charge, to any person obtaining
-    a copy of this software and associated documentation files
-    (the "Software"), to deal in the Software without restriction,
-    including without limitation the rights to:
-</p>
+    <p>
+        This license is a permissive free software license that allows users
+        to freely use, modify, and distribute software while preserving
+        copyright notice and disclaimer requirements.
+    </p>
 
-<ul>
-    <li>Use</li>
-    <li>Copy</li>
-    <li>Modify</li>
-    <li>Merge</li>
-    <li>Publish</li>
-    <li>Distribute</li>
-    <li>Sublicense</li>
-    <li>Sell copies of the Software</li>
-</ul>
+    <div class="notice">
+        The purpose of this license is to encourage open software development
+        while maintaining legal clarity and attribution.
+    </div>
 
-<p>
-    and to permit persons to whom the Software is furnished to do so,
-    subject to the conditions below.
-</p>
+    <h2>2. Permission Grant</h2>
 
-<h2>3. Conditions for Redistribution</h2>
+    <p>
+        Permission is hereby granted, free of charge, to any person obtaining
+        a copy of this software and associated documentation files
+        (the "Software"), to deal in the Software without restriction,
+        including without limitation the rights to:
+    </p>
 
-<p>
-    All copies or substantial portions of the Software must include:
-</p>
+    <ul>
+        <li>Use</li>
+        <li>Copy</li>
+        <li>Modify</li>
+        <li>Merge</li>
+        <li>Publish</li>
+        <li>Distribute</li>
+        <li>Sublicense</li>
+        <li>Sell copies of the Software</li>
+    </ul>
 
-<ul>
-    <li>The above copyright notice.</li>
-    <li>This permission notice.</li>
-</ul>
+    <p>
+        and to permit persons to whom the Software is furnished to do so,
+        subject to the conditions below.
+    </p>
 
-<h2>4. Disclaimer of Warranty</h2>
+    <h2>3. Conditions for Redistribution</h2>
 
-<p>
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
-</p>
+    <p>
+        All copies or substantial portions of the Software must include:
+    </p>
 
-<h2>5. Limitation of Liability</h2>
+    <ul>
+        <li>The above copyright notice.</li>
+        <li>This permission notice.</li>
+    </ul>
 
-<p>
-    IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR AUTHORS BE LIABLE FOR ANY
-    CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-</p>
+    <h2>4. Disclaimer of Warranty</h2>
 
-<h2>6. License Text Usage</h2>
+    <p>
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+    </p>
 
-<p>
-    This license text may be copied and included in software distributions
-    without modification, provided it is reproduced in full and retains
-    its original attribution.
-</p>
+    <h2>5. Limitation of Liability</h2>
 
-<div class="footer">
-    END OF LICENSE
+    <p>
+        IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR AUTHORS BE LIABLE FOR ANY
+        CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+        TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+        SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    </p>
+
+    <h2>6. License Text Usage</h2>
+
+    <p>
+        This license text may be copied and included in software distributions
+        without modification, provided it is reproduced in full and retains
+        its original attribution.
+    </p>
+
+    <div class="footer">
+        END OF LICENSE
+    </div>
+
 </div>
 ```
 
 </div>
+
+<script>
+function copyLicense() {
+    const text = document.getElementById("license-content").innerText;
+    const status = document.getElementById("copyStatus");
+
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            status.textContent = "✓ Copied!";
+            setTimeout(() => {
+                status.textContent = "";
+            }, 2000);
+        })
+        .catch(err => {
+            console.error("Copy failed:", err);
+            status.textContent = "Copy failed";
+        });
+}
+</script>
 
 </body>
 </html>
